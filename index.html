@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Pathways Therapy - Trauma-Informed Care</title>
+    <meta name="description" content="Compassionate, trauma-informed private practice specializing in EMDR, Somatic Experiencing, IFS, and shadow work for healing complex trauma, PTSD, and childhood wounds.">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F4F9FC;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to bottom, #E0F7FA, #B2EBF2);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #00695C;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #004D40;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content {
+            max-width: 900px;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-family: 'Lora', serif;
+            font-size: 3.5em;
+            margin: 0 0 20px;
+        }
+        .hero p {
+            font-size: 1.6em;
+            margin: 0;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-family: 'Lora', serif;
+            color: #00695C;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
+        .about, .services, .approach {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            padding: 50px;
+            margin-bottom: 60px;
+        }
+        .about p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .services li {
+            background: #E0F7FA;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .services li:hover {
+            transform: translateY(-10px);
+        }
+        .services h3 {
+            color: #00695C;
+            margin-bottom: 15px;
+        }
+        .contact {
+            background: linear-gradient(to bottom, #B2EBF2, #E0F7FA);
+            border-radius: 15px;
+            padding: 50px;
+        }
+        .contact form {
+            display: grid;
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            background: white;
+        }
+        button {
+            background: #00695C;
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #004D40;
+        }
+        footer {
+            background: #00695C;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 1em;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5em; }
+            .hero p { font-size: 1.3em; }
+            nav ul { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Healing Pathways Therapy</h1>
+            <p>A compassionate, trauma-informed private practice dedicated to supporting your journey toward healing from complex trauma, PTSD, childhood wounds, and inner shadow work.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a licensed therapist with extensive experience in trauma-informed care. Specializing in EMDR, somatic experiencing, Internal Family Systems (IFS), and gentle shadow work integration, I create a safe, nurturing space for adults healing from complex PTSD, childhood trauma, and relational wounds.</p>
+        <p>My approach is rooted in empathy, neuroscience, and mindfulness, empowering you to process deep emotions, regulate your nervous system, and rediscover wholeness and resilience.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Services Offered</h2>
+        <ul>
+            <li>
+                <h3>EMDR Therapy</h3>
+                <p>Eye Movement Desensitization and Reprocessing to gently process and release traumatic memories.</p>
+            </li>
+            <li>
+                <h3>Somatic Experiencing</h3>
+                <p>Body-centered therapy to release stored trauma and restore natural nervous system balance.</p>
+            </li>
+            <li>
+                <h3>Internal Family Systems (IFS)</h3>
+                <p>Compassionate exploration and harmonizing of inner parts affected by trauma.</p>
+            </li>
+            <li>
+                <h3>Shadow Work Integration</h3>
+                <p>Gentle illumination of unconscious patterns for deeper self-acceptance and growth.</p>
+            </li>
+            <li>
+                <h3>Complex PTSD Support</h3>
+                <p>Tailored strategies for managing chronic trauma symptoms and building stability.</p>
+            </li>
+            <li>
+                <h3>Childhood Trauma Healing</h3>
+                <p>Specialized care for resolving adverse childhood experiences and fostering secure inner attachments.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="approach" class="approach">
+        <h2>My Trauma-Informed Approach</h2>
+        <p>Every session prioritizes safety, trust, choice, and empowerment. By blending EMDR for efficient trauma processing, somatic techniques for body awareness, IFS for inner harmony, and mindful shadow work, we collaboratively address the roots of pain while nurturing your innate capacity for healing and growth.</p>
+        <p>Together, we move at your pace toward greater peace, self-compassion, and authentic living.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Begin Your Healing Journey</h2>
+        <p style="text-align:center; font-size:1.2em; max-width:800px; margin:0 auto 40px;">Reach out for a free consultation. Your story matters, and a safer, more empowered life is possible.</p>
+        <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Share a bit about what brings you here..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p style="text-align:center; margin-top:30px; font-size:0.9em;">All inquiries are confidential.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Healing Pathways Therapy • Private Practice • Confidential & Compassionate Care</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
