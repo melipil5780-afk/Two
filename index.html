@@ -1,466 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healing Pathways Therapy - Trauma-Informed Care</title>
-    <meta name="description" content="Compassionate, trauma-informed private practice specializing in EMDR, Somatic Experiencing, IFS, and shadow work for healing complex trauma, PTSD, and childhood wounds.">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #00695C; /* Dark Teal */
-            --secondary-color: #B2DFDB; /* Light Teal */
-            --accent-color: #4DB6AC; /* Medium Teal */
-            --background-light: #F0F4F8; /* Light Grey Blue */
-            --background-white: #FFFFFF;
-            --text-dark: #2C3E50; /* Darker Blue-Grey */
-            --text-light: #ECEFF1; /* Very Light Grey */
-            --shadow-subtle: 0 4px 15px rgba(0,0,0,0.05);
-            --border-radius: 10px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            margin: 0;
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--background-light);
-            color: var(--text-dark);
-            line-height: 1.7;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+<title>Healing Pathways Therapy – Trauma-Informed Care</title>
+<meta name="description" content="Compassionate, trauma-informed therapy specializing in EMDR, Somatic Experiencing, IFS, and complex trauma healing.">
 
-        /* --- Header & Navigation --- */
-        header {
-            background: var(--background-white);
-            padding: 15px 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow-subtle);
-            border-bottom: 1px solid var(--secondary-color);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-        }
+<style>
+:root {
+    --primary: #00695C;
+    --secondary: #B2DFDB;
+    --accent: #4DB6AC;
+    --bg-light: #F0F4F8;
+    --white: #ffffff;
+    --text-dark: #2C3E50;
+    --text-light: #ECEFF1;
+    --radius: 12px;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 1.05em;
-            padding: 5px 0;
-            position: relative;
-            transition: color 0.3s ease-in-out;
-        }
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease-in-out;
-        }
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
 
-        nav a:hover, nav a.active {
-            color: var(--accent-color);
-        }
+/* GLOBAL LAYOUT */
+section {
+    width: 100%;
+    padding: 100px 0;
+}
 
-        nav a:hover::after, nav a.active::after {
-            width: 100%;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80') no-repeat center/cover;
-            min-height: 80vh; /* Fuller height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--text-light);
-            padding: 40px 20px; /* Add some padding */
-        }
+/* HEADER */
+header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
 
-        .hero-content {
-            max-width: 950px;
-            padding: 30px;
-            background-color: rgba(0,0,0,0.25); /* Slightly darker overlay for text readability */
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(3px); /* Subtle blur for depth */
-        }
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    list-style: none;
+    padding: 18px;
+}
 
-        .hero h1 {
-            font-family: 'Lora', serif;
-            font-size: 4em;
-            margin: 0 0 20px;
-            line-height: 1.1;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary);
+    position: relative;
+}
 
-        .hero p {
-            font-size: 1.7em;
-            margin: 0;
-            font-weight: 300;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-        }
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--accent);
+    transition: .3s;
+}
 
-        /* --- General Section Styling --- */
-        section {
-            padding: 100px 20px; /* More vertical padding */
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
 
-        h2 {
-            font-family: 'Lora', serif;
-            color: var(--primary-color);
-            text-align: center;
-            font-size: 3.2em;
-            margin-bottom: 60px;
-            position: relative;
-            padding-bottom: 15px;
-        }
+/* HERO */
+.hero {
+    min-height: 85vh;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=2000&q=80')
+        center / cover no-repeat;
+    display: flex;
+    align-items: center;
+}
 
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
-            border-radius: 5px;
-        }
+.hero-content {
+    max-width: 900px;
+    background: rgba(0,0,0,.35);
+    padding: 60px;
+    border-radius: var(--radius);
+    backdrop-filter: blur(4px);
+    color: var(--text-light);
+}
 
-        .card {
-            background: var(--background-white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-subtle);
-            padding: 50px;
-            margin-bottom: 60px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
+.hero p {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
 
-        /* --- About Section --- */
-        .about p {
-            font-size: 1.15em;
-            max-width: 850px;
-            margin: 0 auto 25px;
-            text-align: center;
-            color: var(--text-dark);
-        }
+/* SECTION HEADERS */
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 60px;
+}
 
-        /* --- Services Section --- */
-        .services ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
+/* CARD */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 70px;
+}
 
-        .services li {
-            background: var(--secondary-color);
-            padding: 35px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* Lighter shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+/* ABOUT */
+.about p {
+    max-width: 850px;
+    margin: 0 auto 28px;
+    font-size: 1.15rem;
+    text-align: center;
+}
 
-        .services li:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
+/* SERVICES */
+.services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 30px;
+    list-style: none;
+}
 
-        .services h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            font-family: 'Lora', serif;
-        }
+.services li {
+    background: var(--secondary);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
 
-        .services p {
-            font-size: 1em;
-            color: var(--text-dark);
-        }
+.services h3 {
+    font-family: 'Lora', serif;
+    color: var(--primary);
+    margin-bottom: 14px;
+}
 
-        /* --- Approach Section --- */
-        .approach {
-            background: var(--background-white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-subtle);
-            padding: 60px;
-            margin-bottom: 60px;
-            text-align: center;
-        }
+/* APPROACH */
+.approach {
+    background: linear-gradient(180deg, #ffffff, #f7fafc);
+}
 
-        .approach p {
-            font-size: 1.15em;
-            max-width: 900px;
-            margin: 0 auto 25px;
-            color: var(--text-dark);
-        }
+.approach-box {
+    background: var(--white);
+    padding: 70px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
 
-        /* --- Contact Section --- */
-        .contact {
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color)); /* Gradient background */
-            border-radius: var(--border-radius);
-            padding: 70px 50px;
-            color: var(--background-white); /* White text for contrast */
-        }
-        
-        .contact h2 {
-            color: var(--background-white);
-            margin-bottom: 40px;
-        }
+.approach-box p {
+    max-width: 900px;
+    margin: 0 auto 26px;
+    font-size: 1.15rem;
+}
 
-        .contact h2::after {
-            background-color: var(--background-white);
-        }
+/* CONTACT */
+.contact {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--white);
+}
 
-        .contact p {
-            text-align: center;
-            font-size: 1.3em;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            color: var(--text-light);
-            font-weight: 300;
-        }
+.contact h2 {
+    color: var(--white);
+}
 
-        .contact form {
-            display: grid;
-            gap: 25px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+.contact p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
 
-        input, textarea {
-            padding: 18px;
-            border: 1px solid rgba(255,255,255,0.4);
-            border-radius: var(--border-radius);
-            font-size: 1.1em;
-            background: rgba(255,255,255,0.9); /* Slightly transparent white */
-            color: var(--text-dark);
-            transition: border-color 0.3s ease, background-color 0.3s ease;
-        }
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    gap: 24px;
+}
 
-        input::placeholder, textarea::placeholder {
-            color: #78909C; /* Soft grey placeholder */
-        }
+input, textarea {
+    padding: 18px;
+    border-radius: var(--radius);
+    border: none;
+    font-size: 1.05rem;
+}
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            background-color: var(--background-white);
-            box-shadow: 0 0 0 3px rgba(0,105,92,0.2);
-        }
-        
-        button {
-            background: var(--primary-color);
-            color: var(--background-white);
-            border: none;
-            padding: 18px;
-            border-radius: var(--border-radius);
-            font-size: 1.25em;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
+button {
+    background: var(--primary);
+    color: var(--white);
+    padding: 18px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
 
-        button:hover {
-            background: #004D40; /* Darker teal on hover */
-            transform: translateY(-2px);
-        }
+button:hover {
+    background: #004D40;
+}
 
-        .contact .fine-print {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.95em;
-            color: var(--text-light);
-        }
+.fine-print {
+    text-align: center;
+    margin-top: 30px;
+    font-size: .95rem;
+}
 
-        /* --- Footer --- */
-        footer {
-            background: var(--primary-color);
-            color: var(--text-light);
-            text-align: center;
-            padding: 30px;
-            font-size: 1em;
-            border-top: 5px solid var(--accent-color);
-        }
+/* FOOTER */
+footer {
+    background: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 32px;
+}
 
-        /* --- Responsive Design --- */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 3.5em; }
-            .hero p { font-size: 1.5em; }
-            h2 { font-size: 2.8em; }
-            section { padding: 80px 20px; }
-            .card, .approach, .contact, .services li { padding: 40px; }
-        }
-
-        @media (max-width: 768px) {
-            nav ul { flex-direction: column; gap: 15px; }
-            .hero { min-height: 60vh; }
-            .hero h1 { font-size: 2.8em; }
-            .hero p { font-size: 1.3em; }
-            h2 { font-size: 2.3em; margin-bottom: 40px; }
-            .card, .approach, .contact, .services li { padding: 30px; }
-            .about p, .approach p, .contact p { font-size: 1.05em; }
-            .services ul { grid-template-columns: 1fr; } /* Stack services on small screens */
-            input, textarea, button { padding: 15px; font-size: 1em; }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 2.2em; }
-            .hero p { font-size: 1.1em; }
-            h2 { font-size: 1.8em; }
-            section { padding: 60px 15px; }
-            .card, .approach, .contact, .services li { padding: 25px; }
-            nav a { font-size: 0.95em; }
-        }
-    </style>
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.6rem; }
+    .hero p { font-size: 1.25rem; }
+    h2 { font-size: 2.2rem; }
+    .card, .approach-box { padding: 40px; }
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Healing Pathways Therapy</h1>
-            <p>A compassionate, trauma-informed private practice dedicated to supporting your journey toward healing from complex trauma, PTSD, childhood wounds, and inner shadow work.</p>
-        </div>
-    </section>
+<header>
+<nav>
+<ul>
+<li><a href="#home" class="active">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#approach">Approach</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
 
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>I am a licensed therapist with extensive experience in trauma-informed care. Specializing in EMDR, somatic experiencing, Internal Family Systems (IFS), and gentle shadow work integration, I create a safe, nurturing space for adults healing from complex PTSD, childhood trauma, and relational wounds.</p>
-        <p>My approach is rooted in empathy, neuroscience, and mindfulness, empowering you to process deep emotions, regulate your nervous system, and rediscover wholeness and resilience.</p>
-    </section>
+<section id="home" class="hero">
+<div class="container">
+<div class="hero-content">
+<h1>Healing Pathways Therapy</h1>
+<p>Trauma-informed care supporting healing from complex trauma, PTSD, and early relational wounds.</p>
+</div>
+</div>
+</section>
 
-    <section id="services" class="card">
-        <h2>Services Offered</h2>
-        <ul>
-            <li>
-                <h3>EMDR Therapy</h3>
-                <p>Eye Movement Desensitization and Reprocessing to gently process and release traumatic memories.</p>
-            </li>
-            <li>
-                <h3>Somatic Experiencing</h3>
-                <p>Body-centered therapy to release stored trauma and restore natural nervous system balance.</p>
-            </li>
-            <li>
-                <h3>Internal Family Systems (IFS)</h3>
-                <p>Compassionate exploration and harmonizing of inner parts affected by trauma.</p>
-            </li>
-            <li>
-                <h3>Shadow Work Integration</h3>
-                <p>Gentle illumination of unconscious patterns for deeper self-acceptance and growth.</p>
-            </li>
-            <li>
-                <h3>Complex PTSD Support</h3>
-                <p>Tailored strategies for managing chronic trauma symptoms and building stability.</p>
-            </li>
-            <li>
-                <h3>Childhood Trauma Healing</h3>
-                <p>Specialized care for resolving adverse childhood experiences and fostering secure inner attachments.</p>
-            </li>
-        </ul>
-    </section>
+<section id="about">
+<div class="container">
+<div class="card about">
+<h2>About Me</h2>
+<p>I am a licensed therapist specializing in trauma-informed care, EMDR, Somatic Experiencing, and Internal Family Systems.</p>
+<p>My work centers on nervous-system regulation, safety, and compassionate integration of difficult life experiences.</p>
+</div>
+</div>
+</section>
 
-    <section id="approach" class="approach">
-        <h2>My Trauma-Informed Approach</h2>
-        <p>Every session prioritizes safety, trust, choice, and empowerment. By blending EMDR for efficient trauma processing, somatic techniques for body awareness, IFS for inner harmony, and mindful shadow work, we collaboratively address the roots of pain while nurturing your innate capacity for healing and growth.</p>
-        <p>Together, we move at your pace toward greater peace, self-compassion, and authentic living.</p>
-    </section>
+<section id="services">
+<div class="container">
+<div class="card services">
+<h2>Services Offered</h2>
+<ul>
+<li><h3>EMDR Therapy</h3><p>Processing traumatic memories in a structured, gentle way.</p></li>
+<li><h3>Somatic Experiencing</h3><p>Releasing trauma stored in the body.</p></li>
+<li><h3>Internal Family Systems</h3><p>Healing wounded inner parts with compassion.</p></li>
+<li><h3>Shadow Work</h3><p>Exploring unconscious patterns safely.</p></li>
+<li><h3>Complex PTSD</h3><p>Stabilization, regulation, and integration.</p></li>
+<li><h3>Childhood Trauma</h3><p>Repairing early attachment wounds.</p></li>
+</ul>
+</div>
+</div>
+</section>
 
-    <section id="contact" class="contact">
-        <h2>Begin Your Healing Journey</h2>
-        <p>Reach out for a free consultation. Your story matters, and a safer, more empowered life is possible.</p>
-        <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Share a bit about what brings you here..." required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <p class="fine-print">All inquiries are confidential and will be responded to within 48 business hours.</p>
-    </section>
+<section id="approach" class="approach">
+<div class="container">
+<div class="approach-box">
+<h2>My Approach</h2>
+<p>Therapy is collaborative, paced, and grounded in safety.</p>
+<p>Together we work toward stability, self-trust, and lasting healing.</p>
+</div>
+</div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Healing Pathways Therapy • Private Practice • Confidential & Compassionate Care</p>
-    </footer>
+<section id="contact" class="contact">
+<div class="container">
+<h2>Begin Your Healing Journey</h2>
+<p>Reach out for a confidential consultation.</p>
 
-    <script>
-        // Smooth scrolling for navigation links and active state
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-            const sections = document.querySelectorAll('section');
+<form action="mailto:your.email@example.com" method="post">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="6" placeholder="What brings you here?" required></textarea>
+<button type="submit">Send Message</button>
+</form>
 
-            navLinks.forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+<p class="fine-print">All inquiries are confidential.</p>
+</div>
+</section>
 
-                    // Update active state
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
+<footer>
+<p>&copy; 2025 Healing Pathways Therapy</p>
+</footer>
 
-            // Intersection Observer for active navigation link on scroll
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5 // Adjust this value as needed, 0.5 means 50% of the section is visible
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === '#' + entry.target.id) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
 </body>
 </html>
+
